@@ -69,15 +69,5 @@ function inlineKeyboard($key)
 {
     return json_encode(["inline_keyboard" => $key]);
 }
-function sendPhoto($photo, $caption, $key = null)
-{
-    global $chat_id;
-    return bot("sendPhoto", [
-        "chat_id" => $chat_id,
-        "photo" => $photo,
-        "caption" => $caption,
-        "parse_mode" => "markdown",
-        "reply_markup" => $key,
-    ]);
-}
+
 
